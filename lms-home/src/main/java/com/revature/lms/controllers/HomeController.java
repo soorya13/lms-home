@@ -12,7 +12,7 @@ public class HomeController {
 	
 	{
 		System.out.println("Inside controller");
-		return "index";
+		return "/views/index.htm";
 	}
 
 }

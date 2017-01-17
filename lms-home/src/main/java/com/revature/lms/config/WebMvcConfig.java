@@ -16,6 +16,8 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter{
 	@Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
+        registry.addResourceHandler("/views/**").addResourceLocations("/WEB-INF/views/");
+        registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
     }
 
 
@@ -23,8 +25,8 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter{
 	    public InternalResourceViewResolver getInternalResourceViewResolver() {
 	        InternalResourceViewResolver resolver = new InternalResourceViewResolver();
 	       
-	        resolver.setPrefix("/WEB-INF/views/");
-	        resolver.setSuffix(".jsp");
+	        resolver.setPrefix("");
+	        resolver.setSuffix("");
 	        return resolver;
 	    }
 }
