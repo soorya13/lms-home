@@ -1,4 +1,3 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,16 +9,20 @@
     <meta name="author" content="">
 
     <title>Leave Management System - Home</title>
+ <!-- Bootstrap Core CSS -->
+    <link href="resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Bootstrap Core CSS -->
-    <link href="resources/css/bootstrap.min.css" rel="stylesheet">
+    <!-- MetisMenu CSS -->
+    <link href="resources/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="resources/css/business-casual.css" rel="stylesheet">
+    <link href="resources/dist/css/sb-admin-2.css" rel="stylesheet">
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+    <!-- Morris Charts CSS -->
+    <link href="resources/vendor/morrisjs/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="resources/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -32,101 +35,255 @@
 
 <body>
 
-    
-   
+    <div id="wrapper">
 
-  
-
-    <div class="container">
-        <div class="row">
-            <div class="box">
-                <div class="col-lg-12">
-                    <hr>
-                    <h2 class="intro-text text-center">Welcome!
-                        <strong>Apply Using the following form</strong>
-                     
-                    </h2>
-                    <hr>
-                     <div ng-app="myApp">
-    <div ng-controller="myCtrl">
-    <h1 ng-bind="firstname">sdfsaf</h1>
-    </div>
-    
-    </div>
-                </div>
-                <div class="col-md-4">
-                    <p>Phone:
-                        <strong>123.456.7890</strong>
-                    </p>
-                    <p>Email:
-                        <strong><a href="mailto:name@example.com">name@example.com</a></strong>
-                    </p>
-                    <p>Address:
-                        <strong>3481 Melrose Place
-                            <br>Beverly Hills, CA 90210</strong>
-                    </p>
-                </div>
-                <div class="clearfix"></div>
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="home">RevSys</a>
             </div>
-        </div>
+            <!-- /.navbar-header -->
 
-        <div class="row">
-            <div class="box">
+            <ul class="nav navbar-top-links navbar-right">
+                
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                            <!-- /input-group -->
+                        </li>
+                        <li>
+                            <a href="home"><i class="fa fa-home fa-fw"></i> Home</a>
+                        </li>
+                        
+                        <li>
+                            <a href="holidays"><i class="fa fa-table fa-fw"></i>Holiday Master</a>
+                        </li>
+                        <li>
+                            <a href="history"><i class="fa fa-files-o fa-fw"></i>Leave History</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
                 <div class="col-lg-12">
-                    <hr>
-                    <h2 class="intro-text text-center">Contact
-                        <strong>form</strong>
-                    </h2>
-                    <hr>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, vitae, distinctio, possimus repudiandae cupiditate ipsum excepturi dicta neque eaque voluptates tempora veniam esse earum sapiente optio deleniti consequuntur eos voluptatem.</p>
-                    <form role="form">
-                        <div class="row">
-                            <div class="form-group col-lg-4">
-                                <label>Name</label>
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="form-group col-lg-4">
-                                <label>Email Address</label>
-                                <input type="email" class="form-control">
-                            </div>
-                            <div class="form-group col-lg-4">
-                                <label>Phone Number</label>
-                                <input type="tel" class="form-control">
-                            </div>
-                            <div class="clearfix"></div>
-                            <div class="form-group col-lg-12">
-                                <label>Message</label>
-                                <textarea class="form-control" rows="6"></textarea>
-                            </div>
-                            <div class="form-group col-lg-12">
-                                <input type="hidden" name="save" value="contact">
-                                <button type="submit" class="btn btn-default">Submit</button>
+                    <h1 class="page-header">Dashboard</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+                <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-info">
+                    <div class="panel-heading">                    
+                        <h4>Apply for your Leave:</h4>
+                        <div class="form-group">
+                               <label>Select Date</label>                                          
+                               <input type="date" max="12-31-2017" min="01-01-2017">
+                                <label>Number of Days</label>                                          
+                               <input type="number" min="1" max="30">
+                                <label>Leave Type</label>                                          
+                                <select name="leavetype">
+   								 <option value="pl">Paid Leave</option>
+    							 <option value="cl">Casual Leave</option>
+    							 <option value="sl">Sick Leave</option>
+    							<option value="prl">Privileged Leave</option>
+    							<option value="ml">Maternity Leave</option>
+    							<option value="ptl">Paternity Leave</option>
+  								</select>
+  								<label>Cause:(optional)</label>
+  								<input type="text">
+  								<input class="btn btn-default" type="submit" value="Apply">                                         
+                        </div>
+                        <div>
+                        <a href="cancel">To cancel any applied leave click here.</a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+           </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <div class="row">
+                               
+                                <div class="col-xs-9 ">
+                                    <div class="huge">0</div>
+                                    <div>Paid Leaves left</div>
+                                </div>
                             </div>
                         </div>
-                    </form>
+                        <a href="#">
+                            <div class="panel-footer">                               
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                 <span class="pull-right">View Details &nbsp</span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                    </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <div class="row">
+                               
+                                <div class="col-xs-9">
+                                    <div class="huge">0</div>
+                                    <div>Casual Leaves left</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">                                
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <span class="pull-right">View Details &nbsp</span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <div class="row">
+                               
+                                <div class="col-xs-9">
+                                    <div class="huge">0</div>
+                                    <div>Maternity Leaves left</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">                                
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <span class="pull-right">View Details &nbsp</span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <div class="row">
+                              
+                                <div class="col-xs-9">
+                                    <div class="huge">0</div>
+                                    <div>Sick Leaves left</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <span class="pull-left">View Details &nbsp</span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-9">
+                                    <div class="huge">0</div>
+                                    <div>Paternity Leaves left</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">                                
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <span class="pull-right">View Details &nbsp</span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <div class="row">
+                              
+                                <div class="col-xs-9">
+                                    <div class="huge">0</div>
+                                    <div>Privileged Leaves left</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">                                
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <span class="pull-right">View Details &nbsp</span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
+            <!-- /.row -->
+        
+            
         </div>
+        <!-- /#page-wrapper -->
 
     </div>
-    <!-- /.container -->
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <p>Copyright &copy; Your Website 2014</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <!-- /#wrapper -->
 
     <!-- jQuery -->
-    <script src="resources/js/jquery.js"></script>
+    <script src="resources/vendor/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="resources/js/bootstrap.min.js"></script>
+    <script src="resources/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="resources/vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="resources/vendor/raphael/raphael.min.js"></script>
+    <script src="resources/vendor/morrisjs/morris.min.js"></script>
+    <script src="resources/data/morris-data.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="resources/dist/js/sb-admin-2.js"></script>
     
+<!-- Angular -->    
 <script type="text/javascript" src="webjars/angularjs/1.3.8/angular.min.js"></script>
 <script type="text/javascript" src="webjars/angularjs/1.3.8/angular-resource.min.js"></script>
 <script type="text/javascript" src="resources/js/app.js"></script>
