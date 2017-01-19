@@ -8,10 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class HomeController {
 	
 	@RequestMapping(value={"/","/home"})
-	public String showHome()
-	
-	{
-		
+	public String showHome()	
+	{		
 		return "/views/index.htm";
 	}
 	@RequestMapping("/holidays")
@@ -29,6 +27,10 @@ public class HomeController {
 	{
 		return "/views/leavehistory.htm?cancel=true";
 	}
-	
+	@RequestMapping("/login")
+	public String showLogin()
+	{
+		return "/views/login.htm";
+	}
 
 }
